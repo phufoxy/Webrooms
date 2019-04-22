@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- include head.html -->
+  <title>HTML Boilerplate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+  <!-- favicon -->
+  <link href="images/favicon.ico" type="image/x-icon" rel="icon">
+  <!-- meta social -->
+  <meta name="twitter:card" content="" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:creator" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="">
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="">
+  <meta property="og:url" content="" />
+  <!-- Google Font -->
+  <!-- include styles.html -->
+  <!-- build:css(.) style/vendor.min.css -->
+  <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbuild -->
+  <!-- build:css(.tmp) style/style.min.css -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+  <!-- endbuild -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- include header.html -->
+    <header class="b-dashboard-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="b-header">
+            <div class="b-logo">
+              <a href="#">
+                <img src="https://greenglobal.vn/wp-content/themes/gg2019/resources/assets/images/logo-light.svg" alt="logo" class="link-logo">
+              </a></div>
+          </div>
+          <div class="b-menu">
+            <div class="b-search">
+              <a><i class="fas fa-search"></i></a>
+            </div>
+            <div class="b-user">
+              <a><img src="../../images/user.jpg" class="img-user"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="b-dashboard-content">
+
+      <div class="left-menu">
+        <ul class="list-menu">
+          <li>
+            <div class="user-profile">
+              <div class="user-pic">
+                <img class="img-user" src="../../images/user.jpg" alt=""></div>
+              <div class="user-content">
+                <a href="#">
+                  <h5 class="name-title">User Name &nbsp;<i class="fas fa-sort-down"></i>
+                  </h5>
+                  <span class="user-email text-muted">user@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="item-btn">
+            <a class="btn-create" href="edit.html">
+              <i class="fas fa-plus"></i>
+              <span class="hide-menu">Create New</span>
+            </a>
+          </li>
+          <li class="item-menu ">
+            <a class="item-link active waves-effect waves-dark" href="index.html" target="_self">
+              <i class="fas fa-database"></i>
+              <span class="hide-menu">Dashboard</span>
+            </a>
+          </li>
+          <li class="item-menu ">
+            <a class="item-link waves-effect waves-dark" href="form.html" target="_self">
+              <i class="fas fa-users"></i>
+              <span class="hide-menu">Profile</span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a class="item-link waves-effect waves-dark" href="table.html">
+              <i class="fas fa-table"></i>
+              <span class="hide-menu">Table</span>
+            </a>
+          </li>
+          <li class="text-center">
+            <a href="#" class="link-upgrade">Upgrade to pro</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="right-content">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="page-title">
+                <h3 class="title">Dashboard</h3>
+                <a href="#" class="b-link">Home</a>
+                <span class="b-arrow">
+                  <i class="fas fa-chevron-right"></i>
+                  &nbsp;Library</span>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="btn-upgrade">
+                <a href="#" class="link-upgrade">Upgrade to pro</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card-body">
+                <div>
+                  <h4 class="card-title">Sales Summary</h4>
+                  <h5 class="card-subtitle">Overview of Latest Month
+                  </h5>
+                </div>
+                <div class="chart">
+                  <img src="../../images/chart1.png" class="img-chart" alt=""></div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-body">
+                <h4 class="card-title">Feeds</h4>
+                <div class="feed-widget">
+                  <ul class="list-feed">
+                    <li class="item-feed">
+                      <div class="social">
+                        <i class="far fa-bell icon-1"></i>
+                        <p>You have 4 pending tasks.</p>
+                      </div>
+                      <span class="text-muted text-1">Just Now</span>
+                    </li>
+                    <li class="item-feed">
+                      <div class="social ">
+                        <i class="fas fa-database icon-2"></i>
+                        <p>
+                          Server #1 overloaded.</p>
+                      </div>
+                      <span class="text-muted text-2">2 Hours ago</span>
+                    </li>
+                    <li class="item-feed">
+                      <div class="social">
+                        <i class="fas fa-cart-plus icon-3"></i>
+                        <p>New order received.</p>
+                      </div>
+                      <span class="text-muted text-3">31 May</span>
+                    </li>
+                    <li class="item-feed">
+                      <div class="social">
+                        <i class="fas fa-user icon-4"></i>
+                        <p>New user registered.</p>
+                      </div>
+                      <span class="text-muted text-4">30 May</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card-body">
+                <div class="header-card">
+                  <div>
+                    <h4 class="card-title">Top Selling Products</h4>
+                    <h5 class="card-subtitle">Overview of Top Selling Items
+                    </h5>
+                  </div>
+                  <div class="drop-select">
+                    <select class="custom-select">
+                      <option value="0" selected>Monthly</option>
+                      <option value="1">Daily</option>
+                      <option value="2">Weekly</option>
+                      <option value="4">Yearly</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr class="bg-table">
+                        <th scope="col">Product</th>
+                        <th scope="col">License</th>
+                        <th scope="col">Support Agent</th>
+                        <th scope="col">Technology</th>
+                        <th scope="col">Tickets</th>
+                        <th scope="col">Sales</th>
+                        <th scope="col">Earnings</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row">
+                          <div class="product-name">
+                            <a href="#" class="link-name user-1">AE</a>
+                            <h4 class="b-text">Elite Admin</h4>
+                          </div>
+                        </td>
+                        <td>Single Use</td>
+                        <td>John Doe</td>
+                        <td>
+                          <label class="label label-1">Angular</label>
+                        </td>
+                        <td>46</td>
+                        <td>356</td>
+                        <td>
+                          <h5 class="price">$2850.06</h5>
+                        </td>
+                        <td>
+                          <button class="btn_edit">Edit</button>
+                          <button class="btn_dele">Delete</button>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td scope="row">
+                          <div class="product-name">
+                            <a href="#" class="link-name user-2">MA</a>
+                            <h4 class="b-text">Monster Admin</h4>
+                          </div>
+                        </td>
+                        <td>Single Use</td>
+                        <td>Venessa Fern
+                        </td>
+                        <td>
+                          <label class="label label-2">Vue Js</label>
+                        </td>
+                        <td>46</td>
+                        <td>356</td>
+                        <td>
+                          <h5 class="price">$2850.06</h5>
+                        </td>
+                        <td>
+                          <button class="btn_edit">Edit</button>
+                          <button class="btn_dele">Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td scope="row">
+                          <div class="product-name">
+                            <a href="#" class="link-name user-3">MP</a>
+                            <h4 class="b-text">Material Pro Admin</h4>
+                          </div>
+                        </td>
+                        <td>Single Use</td>
+                        <td>John Doe</td>
+                        <td>
+                          <label class="label label-3">Bootstrap</label>
+                        </td>
+                        <td>46</td>
+                        <td>356</td>
+                        <td>
+                          <h5 class="price">$2850.06</h5>
+                        </td>
+                        <td>
+                          <button class="btn_edit">Edit</button>
+                          <button class="btn_dele">Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td scope="row">
+                          <div class="product-name">
+                            <a href="#" class="link-name user-4">AA</a>
+                            <h4 class="b-text">Ample Admin</h4>
+                          </div>
+                        </td>
+                        <td>Single Use</td>
+                        <td>John Doe</td>
+                        <td>
+                          <label class="label label-4">React</label>
+                        </td>
+                        <td>46</td>
+                        <td>356</td>
+                        <td>
+                          <h5 class="price">$2850.06</h5>
+                        </td>
+                        <td>
+                          <button class="btn_edit">Edit</button>
+                          <button class="btn_dele">Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card-body">
+                <div>
+                  <h4 class="card-title">Recent Comments</h4>
+                </div>
+
+                <div class="comment-row">
+                  <div class="b-user">
+                    <img src="../../images/user.jpg" class="img-user" width="50px" height="50px" alt=""></div>
+                  <div class="comment-text">
+                    <div class="comment-header">
+                      <h6 class="name-user">James Anderson</h6>
+                      <p class="text-user">Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                    </div>
+                    <div class="footer-comment">
+                      <span class="label label-1">Peding
+
+                      </span>
+                      <span class="action-icon icon-1">
+                        <a href="#">
+                          <i class="far fa-comment-dots"></i>
+                        </a>
+                        <a href="#">
+                          <i class="far fa-heart"></i>
+
+                        </a>
+                      </span>
+                      <span class="text-muted">April 14, 2016</span>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="comment-row">
+                  <div class="b-user">
+                    <img src="../../images/user1.jpg" class="img-user" width="50px" height="50px" alt=""></div>
+                  <div class="comment-text">
+                    <div class="comment-header">
+                      <h6 class="name-user">Michael Jorden</h6>
+                      <p class="text-user">Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                    </div>
+                    <div class="footer-comment">
+                      <span class="label label-2">Approved
+
+                      </span>
+                      <span class="action-icon">
+                        <a href="#">
+                          <i class="far fa-comment-dots"></i>
+                        </a>
+                        <a href="#">
+                          <i class="far fa-heart heart"></i>
+
+                        </a>
+                      </span>
+                      <span class="text-muted">April 14, 2016</span>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="b-user">
+                    <img src="../../images/user2.jpg" class="img-user" width="50px" height="50px" alt=""></div>
+                  <div class="comment-text">
+                    <div class="comment-header">
+                      <h6 class="name-user">Johnathan Doeting</h6>
+                      <p class="text-user">Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                    </div>
+                    <div class="footer-comment">
+                      <span class="label label-3">Rejected
+
+                      </span>
+                      <span class="action-icon icon-1">
+                        <a href="#">
+                          <i class="far fa-comment-dots"></i>
+                        </a>
+                        <a href="#">
+                          <i class="far fa-heart"></i>
+
+                        </a>
+                      </span>
+                      <span class="text-muted">April 14, 2016</span>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-6">
+              <div class="card-body">
+                <h4 class="card-title">Temp Guide</h4>
+                <div class="shower-widget">
+                  <div class="icon-shower">
+                    <i class="fas fa-cloud-showers-heavy"></i>
+                    <span>73<sup>°</sup>
+                    </span>
+                  </div>
+                  <div class="title-place">
+                    <h3 class="b-title">Saturday</h3>
+                    <small class="text-muted">Ahmedabad, India</small>
+                  </div>
+                </div>
+                <table class="table table-temp">
+                  <tbody>
+                    <tr>
+
+                      <td class="temp-title">Wind</td>
+                      <td class="temp">ESE 17 mph</td>
+
+                    </tr>
+                    <tr>
+
+                      <td class="temp-title">Humidity</td>
+                      <td class="temp">83%</td>
+
+                    </tr>
+                    <tr>
+
+                      <td class="temp-title">Pressure</td>
+                      <td class="temp">28.56 in</td>
+
+                    </tr>
+                    <tr>
+
+                      <td class="temp-title">Cloud Cover</td>
+                      <td class="temp">78%</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+                <ul class="row">
+                  <li class="col-3 text-center">
+                    <h4 class="text-info">
+                      <i class="fas fa-sun"></i>
+                    </h4>
+                    <p class="d-block text-muted">09:30</p>
+                    <h3 class="temperature">70<sup>°</sup>
+                    </h3>
+                  </li>
+                  <li class="col-3 text-center">
+                    <h4 class="text-info ">
+                      <i class="fas fa-cloud-sun"></i>
+                    </h4>
+                    <p class="d-block text-muted">11:30</p>
+                    <h3 class="temperature">72<sup>°</sup>
+                    </h3>
+                  </li>
+                  <li class="col-3  text-center">
+                    <h4 class="text-info">
+                      <i class="fas fa-cloud-moon-rain"></i>
+                    </h4>
+                    <p class="d-block text-muted">13:30</p>
+                    <h3 class="temperature">75<sup>°</sup>
+                    </h3>
+                  </li>
+                  <li class="col-3  text-center">
+                    <h4 class="text-info">
+                      <i class="fas fa-cloud-sun-rain"></i>
+                    </h4>
+                    <p class="d-block text-muted">15:30</p>
+                    <h3 class="temperature">76<sup>°</sup>
+                    </h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="b-dashboard-footer">
+          <h3 class="text-muted text-center">
+            All Rights Reserved by Xtreme Admin. Designed and Developed by WrapPixel.
+          </h3>
+        </footer>
+      </div>
+    </section>
+
+    <!-- include banner.html -->
+
+
+
+
+
+    <!-- include footer.html -->
+
+  </div>
+
+  <!-- include scripts.html -->
+  <!-- build:js(.) script/vendor.min.js -->
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="node_modules/materialize-css/js/waves.js"></script>
+  <!-- endbuild -->
+  <!-- build:js script/script.min.js -->
+  <script type="text/javascript" src="scripts/script.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
