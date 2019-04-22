@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- include head.html -->
+  <title>HTML Boilerplate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+  <!-- favicon -->
+  <link href="images/favicon.ico" type="image/x-icon" rel="icon">
+  <!-- meta social -->
+  <meta name="twitter:card" content="" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:creator" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="">
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="">
+  <meta property="og:url" content="" />
+  <!-- Google Font -->
+  <!-- include styles.html -->
+  <!-- build:css(.) style/vendor.min.css -->
+  <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbuild -->
+  <!-- build:css(.tmp) style/style.min.css -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+  <!-- endbuild -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- include header.html -->
+    <header class="b-dashboard-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="b-header">
+            <div class="b-logo">
+              <a href="#">
+                <img src="https://greenglobal.vn/wp-content/themes/gg2019/resources/assets/images/logo-light.svg" alt="logo" class="link-logo">
+              </a></div>
+          </div>
+          <div class="b-menu">
+            <div class="b-search">
+              <a><i class="fas fa-search"></i></a>
+            </div>
+            <div class="b-user">
+              <a><img src="../../images/user.jpg" class="img-user"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- include banner.html -->
+    <section class="b-dashboard-content">
+
+      <div class="left-menu">
+        <ul class="list-menu">
+          <li>
+            <div class="user-profile">
+              <div class="user-pic">
+                <img class="img-user" src="../../images/user.jpg" alt=""></div>
+              <div class="user-content">
+                <a href="#">
+                  <h5 class="name-title">User Name &nbsp;<i class="fas fa-sort-down"></i>
+                  </h5>
+                  <span class="user-email text-muted">user@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="item-btn">
+            <a class="btn-create" href="edit.html">
+              <i class="fas fa-plus"></i>
+              <span class="hide-menu">Create New</span>
+            </a>
+          </li>
+          <li class="item-menu ">
+            <a class="item-link active waves-effect waves-dark" href="index.html" target="_self">
+              <i class="fas fa-database"></i>
+              <span class="hide-menu">Dashboard</span>
+            </a>
+          </li>
+          <li class="item-menu ">
+            <a class="item-link waves-effect waves-dark" href="form.html" target="_self">
+              <i class="fas fa-users"></i>
+              <span class="hide-menu">Profile</span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a class="item-link waves-effect waves-dark" href="table.html">
+              <i class="fas fa-table"></i>
+              <span class="hide-menu">Table</span>
+            </a>
+          </li>
+          <li class="text-center">
+            <a href="#" class="link-upgrade">Upgrade to pro</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="edit-form">
+        <div class="container-fluid">
+          <div class="header-title">
+            <div class="page-title">
+              <h3 class="title">Profile Page</h3>
+              <a href="#" class="b-link">Home</a>
+              <span class="b-arrow">
+                <i class="fas fa-chevron-right"></i>
+                &nbsp;Library</span>
+            </div>
+
+            <div class="btn-upgrade">
+              <a href="#" class="link-upgrade">Upgrade to pro</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="b-card">
+                <div class="card-body">
+                  <form class="form-horizontal form-material">
+                    <div class="form-group">
+                      <label class="text-contact">Full Name</label>
+                      <input class="form-control" placeholder="Johnathan Doe" type="text"></div>
+                    <div class="form-group">
+                      <label class="text-contact">Email</label>
+                      <input class="form-control" placeholder="johnathan@admin.com" type="text"></div>
+                    <div class="form-group">
+                      <label class="text-contact">Password</label>
+                      <input class="form-control" value="password" type="password"></div>
+                    <div class="form-group">
+                      <label class="text-contact">Phone No</label>
+                      <input class="form-control" placeholder="123 456 7890" type="text"></div>
+                    <div class="form-group">
+                      <label class="text-contact">Message</label>
+                      <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label class="text-contact">Select Country</label>
+                      <select class="form-control">
+                        <option class="city">London</option>
+                        <option class="city">India</option>
+                        <option class="city">Vietnam</option>
+                        <option class="city">Thailan</option>
+                        <option class="city">Singapore</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-success">Update Profile</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="b-dashboard-footer">
+          <h3 class="text-muted text-center">
+            All Rights Reserved by Xtreme Admin. Designed and Developed by WrapPixel.
+          </h3>
+        </footer>
+      </div>
+    </section>
+
+
+
+    <!-- include footer.html -->
+
+  </div>
+
+  <!-- include scripts.html -->
+  <!-- build:js(.) script/vendor.min.js -->
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="node_modules/materialize-css/js/waves.js"></script>
+  <!-- endbuild -->
+  <!-- build:js script/script.min.js -->
+  <script type="text/javascript" src="scripts/script.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

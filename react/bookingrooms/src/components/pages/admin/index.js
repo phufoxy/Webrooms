@@ -1,2 +1,5 @@
 import HomePage from './HomePage';
-export { HomePage };
+import ProfilePage from './ProfilePage';
+import TablePage from './TablePage';
+
+export { HomePage, ProfilePage,TablePage};
