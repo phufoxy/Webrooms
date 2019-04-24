@@ -1,2 +1,3 @@
 import HeaderLayout from './HeaderLayout';
-export {HeaderLayout};
+import SlideBar from './SlideBar';
+export { HeaderLayout, SlideBar };

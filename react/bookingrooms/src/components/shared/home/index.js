@@ -1,3 +1,3 @@
-import BlockLeft from './BlockLeft';
-import BlockRight from './BlockRight';
-export {BlockLeft,BlockRight};
+import CalenderComponent from './calender/CalenderComponent';
+import FullcalenderComponent from './fullcalender/FullcalenderComponent';
+export { CalenderComponent, FullcalenderComponent };

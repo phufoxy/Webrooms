@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 class DashboardComponent extends Component {
     render() {
         return (
@@ -7,15 +7,15 @@ class DashboardComponent extends Component {
                 <div className="col-lg-5">
                     <div className="page-title">
                         <h3 className="title">Dashboard</h3>
-                        <a href="/" className="b-link">Home</a>
+                        <Link to="/" className="b-link">Home</Link>
                         <span className="b-arrow">
-                            <i className="fas fa-chevron-right"/>
+                            <i className="fas fa-chevron-right" />
                             &nbsp;Library</span>
                     </div>
                 </div>
                 <div className="col-lg-7">
                     <div className="btn-upgrade">
-                        <a href="/" className="link-upgrade">Upgrade to pro</a>
+                        <Link to="/" className="link-upgrade">Upgrade to pro</Link>
                     </div>
                 </div>
             </div>
