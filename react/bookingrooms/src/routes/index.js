@@ -1,8 +1,6 @@
 import React from 'react';
 import { HomePage } from '../components/pages/home';
-import { HomePage as HomeAdminPage} from '../components/pages/admin';
-import {ProfilePage as ProfilePage} from '../components/pages/admin';
-import {TablePage as TablePage} from '../components/pages/admin';
+import { HomePage as HomeAdminPage, ProfilePage, TablePage } from '../components/pages/admin';
 import { Route, Switch } from 'react-router-dom';
 const Routes = () => (
     <Switch>
