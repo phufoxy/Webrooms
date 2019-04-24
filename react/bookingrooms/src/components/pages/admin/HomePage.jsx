@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {HeaderLayout,SiderLayout,FooterLayout,DashboardComponent} from '../../layouts/admin';
-import {SalesComponent, FeedComponent, ProductComponent, CommentComponent, TempComponent,} from '../../shared/admin/dashboard';
+import { HeaderLayout, FooterLayout, SiderLayout } from '../../layouts/admin';
+import { DashboardComponent } from '../../shared/admin';
 class HomePage extends Component {
     render() {
         return (
@@ -12,23 +12,10 @@ class HomePage extends Component {
                     <div className="right-content">
                         <div className="container-fluid">
                             <DashboardComponent></DashboardComponent>
-                            <div className="row">
-                                <SalesComponent></SalesComponent>
-                                <FeedComponent></FeedComponent>
-                                
-                            </div>
-                    
-                            <ProductComponent></ProductComponent>
-
-                            <div className="row">
-                                <CommentComponent></CommentComponent>
-                                <TempComponent></TempComponent>
-                            </div>
                         </div>
-                        <FooterLayout></FooterLayout>
                     </div>
-                    
                 </section>
+                <FooterLayout></FooterLayout>
             </div>
         );
     }
