@@ -31,7 +31,6 @@ class HomePage extends Component {
             datecalender: data
         })
     }
-   
     render() {
         return (
             <div className="wrapper">

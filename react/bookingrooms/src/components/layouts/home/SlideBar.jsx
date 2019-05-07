@@ -34,11 +34,7 @@ class SlideBar extends Component {
             count: 1,
             choice: 'date'
         }
-    }
-    showModal = () => {
-        this.setState({
-            visible: true,
-        });
+            
     }
 
     handleOk = (e) => {
@@ -202,7 +198,6 @@ class SlideBar extends Component {
                                             <option value={15}>15</option>
                                         </select>
                                     </div>
-
                                 </div>
                                 <div className="b-form-button">
                                     <button type="cancel" className="b-btn b-btn-save waves-effect waves-teal">Hủy</button>
