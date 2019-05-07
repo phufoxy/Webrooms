@@ -3,12 +3,9 @@ import React, { Component } from 'react';
 class TableComponent extends Component {
 
     onChangerView = () => {
-        this
-            .props
-            .onChangerView();
+        this.props.onChangerView();
     }
     render() {
-
         return (
             <div className="add-form">
                 <div className="container-fluid">
