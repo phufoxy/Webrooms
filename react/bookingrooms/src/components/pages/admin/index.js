@@ -1,4 +1,4 @@
 import HomePage from './HomePage';
-
-
-export { HomePage };
+import RoomPage from './RoomPage';
+import ProfilePage from './ProfilePage';
+export { HomePage,RoomPage,ProfilePage };
