@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { HeaderLayout, SlideBar } from '../../layouts/home';
 import { FullcalenderComponent } from '../../shared/home';
-import { requestGetEvent, requestAddEvents } from '../../../actions/events';
+import { requestGetEvent, requestAddEvents, requestDeleteEvent } from '../../../actions/events';
 
 class HomePage extends Component {
     constructor(props, context) {
@@ -31,7 +31,11 @@ class HomePage extends Component {
             datecalender: data
         })
     }
+    onDelete = (id) => {
+        this.props.requestDeleteEvent(id);
+    }
     render() {
+
         return (
             <div className="wrapper">
                 <HeaderLayout></HeaderLayout>
@@ -39,7 +43,7 @@ class HomePage extends Component {
                     <div className="b-block">
                         <SlideBar onGetDate={this.onGetDate} onAddEvent={this.onAddEvent}></SlideBar>
                         <div className="b-block-right">
-                            <FullcalenderComponent is_checkdate={this.state.is_getdate} datecalender={this.state.datecalender} data={this.props.data}></FullcalenderComponent>
+                            <FullcalenderComponent onDelete={this.onDelete} is_checkdate={this.state.is_getdate} datecalender={this.state.datecalender} data={this.props.data}></FullcalenderComponent>
                         </div>
                     </div>
                 </main>
@@ -53,4 +57,4 @@ function mapStateProps(state) {
         fetched: state.event.fetched
     }
 }
-export default connect(mapStateProps, { requestGetEvent, requestAddEvents })(HomePage);
+export default connect(mapStateProps, { requestGetEvent, requestAddEvents, requestDeleteEvent })(HomePage);

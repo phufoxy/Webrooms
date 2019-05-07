@@ -8,6 +8,7 @@ import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
 import allLocales from '@fullcalendar/core/locales-all';
 import '../../../../main.scss'
 import { Modal } from 'antd';
+const confirm = Modal.confirm;
 var dateFormat = require('dateformat');
 var now = new Date()
 dateFormat.i18n = {
@@ -58,18 +59,20 @@ class FullcalenderComponent extends Component {
         this.setState({
             show: true,
             title: info.event.title,
-            description: info.event.extendedProps.description,
-            timestart: dateFormat(info.event.start, "dddd ,  dd mmmm , h:MM"),
-            timeend: dateFormat(info.event.end, "dddd ,   dd mmmm, h:MM"),
+            // description: info.event.extendedProps.description,
+            datestart: dateFormat(info.event.start, "dddd ,  dd mmmm yyyy"),
+            timestart: info.event.extendedProps.timestart,
+            timeend: info.event.extendedProps.timeend,
             room: info.event.extendedProps.room,
             user: info.event.extendedProps.user,
+            id: info.event.id
         })
 
     }
-    onHover = (info) => {
-        console.log(info.event.title);
+    // onHover = (info) => {
+    //     console.log(info.event.id);
 
-    }
+    // }
 
 
     handleClose = () => {
@@ -86,7 +89,21 @@ class FullcalenderComponent extends Component {
             show: false,
         });
     }
-
+    onDelete(id) {
+        var self = this.props;
+        confirm({
+            title: 'Bạn Muốn Xóa Sự Kiện?',
+            content: 'Bạn Có Chắc Chắn',
+            onOk() {
+                self.onDelete(id);
+            },
+            onCancel() {
+            },
+        });
+        this.setState({
+            show: !this.state.show
+        })
+    }
     render() {
         return (
             <div className="b-fullcalender">
@@ -105,7 +122,7 @@ class FullcalenderComponent extends Component {
                                 </button>
                             </div>
                             <div className="b-item">
-                                <button className="b-btn">
+                                <button className="b-btn" onClick={this.onDelete.bind(this, this.state.id)}>
                                     <i className="far fa-trash-alt" />
                                 </button>
                             </div>
@@ -120,13 +137,14 @@ class FullcalenderComponent extends Component {
                                 [{this.state.title}]
                             </h2>
                             <p className="b-text-norm">
-                                {this.state.timestart} - {this.state.timeend}
+                                {this.state.datestart} ( {this.state.timestart} - {this.state.timeend} )
                             </p>
                             <span className="b-text-rom">
                                 {this.state.room}
                             </span>
                             <p className="b-text-user">
                                 {this.state.user}
+                                {this.state.id}
                             </p>
                         </div>
                     </div>
@@ -157,8 +175,8 @@ class FullcalenderComponent extends Component {
                     navLinks={true}
                     editable={true}
                     eventLimit={true}
-                    minTime={'07:30:00'}
-                    maxTime={'19:30:00'}
+                    minTime={'07:00:00'}
+                    maxTime={'19:00:00'}
                     eventClick={this.onEvent.bind(this)}
                     locales={allLocales}
                     locale={'vi'}

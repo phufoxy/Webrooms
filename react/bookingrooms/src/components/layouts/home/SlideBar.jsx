@@ -4,6 +4,7 @@ import { CalenderComponent } from '../../shared/home';
 import moment from 'moment';
 // import locale from 'antd/lib/date-picker/locale/vi_VN';
 import 'antd/dist/antd.css';
+var dateFormatDate = require('dateformat');
 const format = 'HH:mm';
 const dateFormat = 'YYYY-MM-DD';
 var now = new Date()
@@ -25,18 +26,22 @@ class SlideBar extends Component {
             visible: false,
             calender: [],
             title: '',
-            dateStart: '',
+            dateStart: dateFormatDate(now, 'yyyy-mm-dd'),
             rooms: 1,
-            duration: '00:30',
+            timestart: '08:30',
+            timeend: '09:30',
             checkbox: false,
             byweekday: ['su', 'mo'],
-            until: '2019-04-27',
             count: 1,
-            choice: 'date'
+            choice: 'daily'
         }
-            
-    }
 
+    }
+    showModal = () => {
+        this.setState({
+            visible: true
+        })
+    }
     handleOk = (e) => {
         this.setState({
             visible: false,
@@ -64,13 +69,21 @@ class SlideBar extends Component {
         })
     }
     onChangeTime = (time, timeString) => {
-        this.setState({
-            duration: timeString
-        })
+        if (timeString >= this.state.timeend) {
+            this.setState({
+                timestart: timeString,
+                timeend: timeString
+            })
+        } else {
+            this.setState({
+                timestart: timeString,
+                timeend: timeString
+            })
+        }
     }
-    onChangeDate1 = (date, dateString) => {
+    onChangeTimeItem = (date, dateString) => {
         this.setState({
-            until: dateString
+            timeend: dateString
         })
     }
 
@@ -79,8 +92,7 @@ class SlideBar extends Component {
         this.setState({
             visible: false
         })
-        console.log(this.state);
-        // this.props.onAddEvent(this.state)
+        this.props.onAddEvent(this.state)
         this.onReset();
     }
     onChangerCheck = (e) => {
@@ -99,7 +111,9 @@ class SlideBar extends Component {
     }
     onReset() {
         this.setState({
-            title: ''
+            title: '',
+            choice: 'daily',
+            checkbox: false,
         })
     }
     onChange = (date, dateString) => {
@@ -107,6 +121,7 @@ class SlideBar extends Component {
             dateStart: dateString
         })
     }
+
     render() {
 
         return (
@@ -138,11 +153,11 @@ class SlideBar extends Component {
                                 </div>
                                 <div className="b-form-group">
                                     <label style={{ paddingRight: '10px' }}>Giờ Bắt Đầu</label>
-                                    <TimePicker minuteStep={30} defaultValue={moment(this.state.duration, format)} format={format} onChange={this.onChangeTime} />,
+                                    <TimePicker minuteStep={30} defaultValue={moment(this.state.timestart, format)} format={format} onChange={this.onChangeTime} />,
                                 </div>
                                 <div className="b-form-group">
                                     <label style={{ paddingRight: '10px' }}>Giờ Bắt Kết Thúc</label>
-                                    <TimePicker minuteStep={30} defaultValue={moment(this.state.duration, format)} format={format} onChange={this.onChangeTime} />,
+                                    <TimePicker minuteStep={30} defaultValue={moment(this.state.timeend, format)} value={moment(this.state.timeend, format)} format={format} onChange={this.onChangeTimeItem} />,
                                 </div>
                                 <div className="b-form-group">
                                     <label htmlFor="c">Chọn Phòng</label>
@@ -159,14 +174,14 @@ class SlideBar extends Component {
 
                                     <div className="b-form-group">
                                         <label >Theo</label>
-                                        <select className="b-select" name='choice' defaultValue={this.state.count} onChange={this.onChanger}>
-                                            <option value="date">Ngày</option>
-                                            <option value="week">Tuần</option>
-                                            <option value="month">Tháng</option>
-                                            <option value="year">Năm</option>
+                                        <select className="b-select" name='choice' defaultValue={this.state.choice} onChange={this.onChanger}>
+                                            <option value="daily">Ngày</option>
+                                            <option value="weekly">Tuần</option>
+                                            <option value="monthly">Tháng</option>
+                                            <option value="yearly">Năm</option>
                                         </select>
                                     </div>
-                                    {this.state.choice === 'week' ?
+                                    {this.state.choice === 'weekly' ?
                                         <div className="b-form-group">
                                             <Select
                                                 mode="multiple"
