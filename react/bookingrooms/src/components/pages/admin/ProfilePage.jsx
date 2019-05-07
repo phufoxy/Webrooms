@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HeaderLayout, FooterLayout, SiderLayout } from '../../layouts/admin';
-import { DashboardComponent } from '../../shared/admin';
-class HomePage extends Component {
+import { ProfileComponent } from '../../shared/admin';
+class ProfilePage extends Component {
     render() {
         return (
             <div className="wrapper">
                 <HeaderLayout></HeaderLayout>
                 <section className="b-dashboard-content">
                     <SiderLayout></SiderLayout>
-                    <div className="right-content">
+                    <div className="right-form">
                         <div className="container-fluid">
-                            <DashboardComponent></DashboardComponent>
+                            <ProfileComponent></ProfileComponent>
 
                         </div>
                         <FooterLayout></FooterLayout>
@@ -29,4 +29,4 @@ function mapStateProps(state) {
 
     }
 }
-export default connect(mapStateProps, {})(HomePage);
+export default connect(mapStateProps, {})(ProfilePage);

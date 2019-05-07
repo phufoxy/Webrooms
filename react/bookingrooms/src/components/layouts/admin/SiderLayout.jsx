@@ -19,8 +19,8 @@ class SiderLayout extends Component {
                         </div>
                     </li>
                     <li className="item-btn">
-                        <a className="btn-create" href="/">
-                            <i className="fas fa-plus"/>
+                        <a className="btn-create" href="/admin/room">
+                            <i className="fas fa-plus"/>&nbsp;
                             <span className="hide-menu">Create New</span>
                         </a>
                     </li>
@@ -37,7 +37,7 @@ class SiderLayout extends Component {
                         </a>
                     </li>
                     <li className="item-menu">
-                        <a className="item-link waves-effect waves-dark" href="/admin/table">
+                        <a className="item-link waves-effect waves-dark" href="/admin/room">
                             <i className="fas fa-table"/>
                             <span className="hide-menu">Table</span>
                         </a>
