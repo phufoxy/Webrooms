@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class ProfileComponent extends Component {
     render() {
@@ -9,7 +9,7 @@ class ProfileComponent extends Component {
                         <div className="b-card">
                             <div className="card-body">
                                 <div className="card-user text-center">
-                                    <img src="/images/user2.jpg" className="img-user" alt="true" />
+                                    <img src="../../images/user2.jpg" className="img-user" alt="profile"/>
                                     <h3 className="title-name">Hanna Gover</h3>
                                     <h6 className="card-subtitle">Accoubts Manager Amix corp</h6>
                                     <div className="link-text">
@@ -18,7 +18,7 @@ class ProfileComponent extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <hr />
+                            <hr/>
                             <div className="card-body">
                                 <small className="text-muted">Email address</small>
                                 <h6 className="text">hannagover@gmail.com</h6>
@@ -27,17 +27,18 @@ class ProfileComponent extends Component {
                                 <small className="text-muted">Address</small>
                                 <h6 className="text">71 Pilgrim Avenue Chevy Chase, MD 20815</h6>
                                 <div className="map-box">
+                                  
                                 </div>
                                 <small className="text-muted p-t-30 db">Social Profile</small>
                                 <br/>
                                 <button className="btn btn-circle btn-secondary">
-                                    <i className="fab fa-facebook-f" />
+                                    <i className="fab fa-facebook-f"/>
                                 </button>
                                 <button className="btn btn-circle btn-secondary">
-                                    <i className="fab fa-twitter" />
+                                    <i className="fab fa-twitter"/>
                                 </button>
                                 <button className="btn btn-circle btn-secondary">
-                                    <i className="fab fa-youtube" />
+                                    <i className="fab fa-youtube"/>
                                 </button>
                             </div>
                         </div>
@@ -48,19 +49,19 @@ class ProfileComponent extends Component {
                                 <form className="form-horizontal form-material">
                                     <div className="form-group">
                                         <label className="text-contact">Full Name</label>
-                                        <input className="form-control" placeholder="Johnathan Doe" type="text" /></div>
+                                        <input className="form-control" placeholder="Johnathan Doe" type="text"/></div>
                                     <div className="form-group">
                                         <label className="text-contact">Email</label>
-                                        <input className="form-control" placeholder="johnathan@admin.com" type="text" /></div>
+                                        <input className="form-control" placeholder="johnathan@admin.com" type="text"/></div>
                                     <div className="form-group">
                                         <label className="text-contact">Password</label>
-                                        <input className="form-control" defaultValue="password" type="password" /></div>
+                                        <input className="form-control" defaultValue="password" type="password"/></div>
                                     <div className="form-group">
                                         <label className="text-contact">Phone No</label>
-                                        <input className="form-control" placeholder="123 456 7890" type="text" /></div>
+                                        <input className="form-control" placeholder="123 456 7890" type="text"/></div>
                                     <div className="form-group">
                                         <label className="text-contact">Message</label>
-                                        <textarea className="form-control" rows={5} defaultValue={""} />
+                                        <textarea className="form-control" rows={5} defaultValue={""}/>
                                     </div>
                                     <div className="form-group">
                                         <label className="text-contact">Select Country</label>
