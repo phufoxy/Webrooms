@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "dateformat": "^3.0.3"
+    "dateformat": "^3.0.3",
+    "react-js-pagination": "^3.0.2"
   }
 }

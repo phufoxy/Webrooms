@@ -39,7 +39,13 @@ class SiderLayout extends Component {
                     <li className="item-menu">
                         <a className="item-link waves-effect waves-dark" href="/admin/room">
                             <i className="fas fa-table"/>
-                            <span className="hide-menu">Table</span>
+                            <span className="hide-menu">Table Room</span>
+                        </a>
+                    </li>
+                    <li className="item-menu">
+                        <a className="item-link waves-effect waves-dark" href="/admin/bookroom">
+                            <i className="fas fa-table"/>
+                            <span className="hide-menu">Book Room</span>
                         </a>
                     </li>
                     <li className="text-center">
